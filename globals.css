@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 inline-block;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-slate-50 text-blue-600 border-2 border-blue-600 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 inline-block;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-blue {
+    @apply bg-blue-100 text-blue-700;
+  }
+
+  .badge-orange {
+    @apply bg-orange-100 text-orange-700;
+  }
+
+  .badge-green {
+    @apply bg-green-100 text-green-700;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Prose styling for markdown content */
+.prose {
+  @apply max-w-none;
+}
+
+.prose p {
+  @apply mb-4 leading-relaxed;
+}
+
+.prose ul,
+.prose ol {
+  @apply mb-4 ml-6;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose table {
+  @apply w-full border-collapse my-6;
+}
+
+.prose th {
+  @apply bg-slate-100 border border-slate-300 px-4 py-2 text-left font-semibold;
+}
+
+.prose td {
+  @apply border border-slate-300 px-4 py-2;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-blue-500 pl-4 italic my-4 text-slate-600;
+  }
+
+.prose code {
+  @apply bg-slate-100 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.prose pre {
+  @apply bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto my-4;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+.prose a {
+  @apply text-blue-600 hover:text-blue-700 underline;
+  }
+
+.prose strong {
+  @apply font-semibold text-slate-900;
+}
+
+.prose details {
+  @apply bg-slate-50 border border-slate-200 rounded-lg p-4 my-4;
+}
+
+.prose summary {
+  @apply font-semibold cursor-pointer hover:text-blue-600;
+  }
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
